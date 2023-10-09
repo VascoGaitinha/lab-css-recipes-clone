@@ -1,24 +1,91 @@
-/* CSS RESET - do not remove */
-/* Reset default browser styles and provide a consistent starting point */
-html {
-  box-sizing: border-box;
-  font-size: 16px;
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Metal+Mania&family=Quicksand:wght@300&display=swap');
+
+*{
+  margin:0;
+  padding:0;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+html{
+ font-family: "Dosis";
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-  margin: 0;
-  padding: 0;
-  font-weight: lighter;
+header{
+  background-image: url("../images/apple-pie.jpg");
+  background-size: cover;
+  height: 1262px;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color:white;
+  font-size: 6em;
+  text-shadow: 0px 0px 5px black;
 }
 
-/*  Set the font */
-body {
-  font-family: "Helvetica", sans-serif;
+h1{
+  width:fit-content;
+  margin: 0 auto;
+  padding: 50% auto;
 }
 
-/* STYLES */
-/* Write your CSS below */
+hr{
+    width:75%;
+    margin:0 auto;
+}
+
+.s1{
+  margin: 40px 12.5% 20px 12.5%;
+  font-size: 1.5em;
+}
+
+.s2{ /* Same has section one attribuites, but more margin on bot side*/
+  margin: 40px 12.5% 100px 12.5%;
+  font-size: 1.5em;
+}
+
+article{
+  font-size: 2em;
+  margin: 100px 12.5% 0 12.5%;
+  text-align: justify;
+}
+
+img{
+  width: 400px;
+  margin:0 50%;
+}
+
+.imgContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin:50px auto;
+}
+
+h2{
+  margin-bottom: 25px;
+}
+
+ul , ol{
+  padding-left:15px;
+  //* list-style: none; **/
+}
+
+ul > li:before {
+  content: "-";
+  padding-right: 5px;
+}
+
+ol {
+  counter-reset: item;
+}
+
+li {
+  display: block;
+}
+
+li::before {
+  display: inline-block;
+  content: counter(item) ")  ";
+  counter-increment: item;
+  margin-right: 5px;
+}
